@@ -16,6 +16,6 @@
 ```bash
 docker build -f Dockerfile.dev ./
 ```
-
-node-module은 copy할때 오래 걸리므로 docker환경일때는 삭제해줘도 된다.
+* TIP
+> node-module은 copy할때 오래 걸리므로 docker환경일때는 삭제해줘도 된다.
 2. PROD docker file
