@@ -14,3 +14,11 @@ var_dump($class_obj->test2); // int(4)
 random_bytes(16); //임의의 16바이트 문자열 반환
 random_int(5,10); // 5에서 10까지 무작이 정수 반환
 ```
+4. null 연산자
+```php
+// 이전 방식
+$user = (!empty($_GET['user'])) ? $_GET['user'] : '';
+
+//php 7 이상버전
+$user = $_GET['user'] ?? '';
+```
