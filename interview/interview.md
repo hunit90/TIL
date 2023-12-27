@@ -1,4 +1,4 @@
-#php5 와 php7의 차이점
+# php5 와 php7의 차이점
 
 1. mysql_ 관련함수 폐지 
 - PDO 또는 mysqli 사용
@@ -22,3 +22,8 @@ $user = (!empty($_GET['user'])) ? $_GET['user'] : '';
 //php 7 이상버전
 $user = $_GET['user'] ?? '';
 ```
+
+# nodejs가 php보다 좋은점
+
+1. 비동기 I/O 처리
+ - nodejs는 비동기 이벤트 기반 아키텍처를 사용하여 I/O 작업을 효율적으로 처리합니다.
