@@ -1,3 +1,10 @@
+# vim setting
+## Add Molokai color Scheme
+```bash
+mkdir ~/.vim/colors
+curl -o ~/.vim/colors/molokai.vim https://raw.github.com/tomasr/molokai/master/colors/molokai.vim --insecure
+```
+
 ```bash
 set nocompatible
 filetype off
@@ -14,18 +21,21 @@ Plugin 'zenorocha/dracula-theme', {'rtp': 'vim/'}
 " Node JS
 Plugin 'node.js'
 Plugin 'isRuslan/vim-es6'
+Plugin 'scrooloose/nerdcommenter'
 call vundle#end()
 filetype plugin indent on
 
 if has ("syntax")
     syntax on
 endif
+let g:molokai_original=1
+let g:rehash256=1
 
 let vim_markdown_preview_browser='Chrome'
 let vim_markdown_preview_github=1
 let g:syntastic_javascript_checkers = ['eslint']
 
-colorscheme codedark
+colorscheme molokai
 
 nnoremap <C-n><C-t> :NERDTreeToggle<CR>
 
