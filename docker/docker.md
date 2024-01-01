@@ -71,3 +71,22 @@ docker run -it [docker name] npm run test
 docker-compose up # docker compose 실행
 ```
 2. PROD docker file
+
+1. prod dockerfile
+   * Dockerfile
+```dockerfile
+FROM node:alpine as builder
+WORKDIR '/usr/src/app'
+COPY package.json .
+RUN npm install
+COPY ./ ./
+RUN npm run build
+
+FROM nginx
+COPY --from=builder /usr/src/app/build /usr/share/nginx/html
+```
+
+```bash
+docker build . 
+docker run -p 8080:80 [docker image name]
+```
