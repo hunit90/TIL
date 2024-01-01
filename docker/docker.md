@@ -51,6 +51,20 @@ services:
         volumes:
         - /usr/src/app/node_modules
         - ./:/usr/src/app
+    # testcode 추가
+    tests:
+        build:
+            context: .
+            dockerfile: Dockerfile.dev
+        volumes:
+            - /usr/src/app/node_modules
+            - ./:/usr/src/app
+        command: ["npm", "run", "test"]
+```
+
+### docker test
+```bash
+docker run -it [docker name] npm run test
 ```
 
 ```bash
